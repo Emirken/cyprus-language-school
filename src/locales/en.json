@@ -1,0 +1,29 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Cyprus' Leading Language School",
+    "subtitle": "We are here with our expert staff in English, Russian and Turkish education",
+    "cta": "Get Started",
+    "learnMore": "Learn More"
+  },
+  "features": {
+    "title": "Why Choose Us?",
+    "teacher": {
+      "title": "Experienced Teachers",
+      "desc": "Expert, certified and experienced teaching staff"
+    },
+    "method": {
+      "title": "Modern Methods",
+      "desc": "Latest educational techniques and interactive learning methods"
+    },
+    "certificate": {
+      "title": "Certificate Programs",
+      "desc": "Internationally recognized certificate programs"
+    }
+  }
+}

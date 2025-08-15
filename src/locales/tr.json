@@ -1,0 +1,29 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "services": "Hizmetler",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "title": "Kıbrıs'ın Önde Gelen Dil Okulu",
+    "subtitle": "İngilizce, Rusça ve Türkçe eğitiminde uzman kadromuzla yanınızdayız",
+    "cta": "Hemen Başla",
+    "learnMore": "Daha Fazla Bilgi"
+  },
+  "features": {
+    "title": "Neden Bizi Seçmelisiniz?",
+    "teacher": {
+      "title": "Deneyimli Öğretmenler",
+      "desc": "Alanında uzman, sertifikalı ve deneyimli öğretmen kadrosu"
+    },
+    "method": {
+      "title": "Modern Metodlar",
+      "desc": "En güncel eğitim teknikleri ve interaktif öğrenme yöntemleri"
+    },
+    "certificate": {
+      "title": "Sertifika Programları",
+      "desc": "Uluslararası geçerliliğe sahip sertifika programları"
+    }
+  }
+}
