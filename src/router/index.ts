@@ -17,6 +17,26 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('@/views/ServicesPage.vue')
   },
   {
+    path: '/services/english-courses',
+    name: 'EnglishCourses',
+    component: () => import('@/views/services/EnglishCoursesPage.vue')
+  },
+  {
+    path: '/services/international-exams',
+    name: 'InternationalExams',
+    component: () => import('@/views/services/InternationalExamsPage.vue')
+  },
+  {
+    path: '/services/abroad-programs',
+    name: 'AbroadPrograms',
+    component: () => import('@/views/services/AbroadProgramsPage.vue')
+  },
+  {
+    path: '/services/education-consulting',
+    name: 'EducationConsulting',
+    component: () => import('@/views/services/EducationConsultingPage.vue')
+  },
+  {
     path: '/contact',
     name: 'Contact',
     component: () => import('@/views/ContactPage.vue')

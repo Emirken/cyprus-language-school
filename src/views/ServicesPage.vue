@@ -36,17 +36,31 @@
                   <v-list-item-title>{{ feature }}</v-list-item-title>
                 </v-list-item>
               </v-list>
-              <div class="mt-4">
-                <v-chip color="primary" variant="outlined">
+              <div class="mt-4" v-if="service.duration || service.level">
+                <v-chip
+                    v-if="service.duration"
+                    color="primary"
+                    variant="outlined"
+                >
                   {{ service.duration }}
                 </v-chip>
-                <v-chip color="secondary" variant="outlined" class="ml-2">
+                <v-chip
+                    v-if="service.level"
+                    color="secondary"
+                    variant="outlined"
+                    class="ml-2"
+                >
                   {{ service.level }}
                 </v-chip>
               </div>
             </v-card-text>
             <v-card-actions>
-              <v-btn color="primary" variant="text" block>
+              <v-btn
+                  color="primary"
+                  variant="text"
+                  block
+                  @click="navigateToService(service.route)"
+              >
                 Detaylı Bilgi Al
                 <v-icon end>mdi-arrow-right</v-icon>
               </v-btn>
@@ -71,58 +85,65 @@ export default defineComponent({
           title: 'İngilizce Kursları',
           description: 'Başlangıçtan ileri seviyeye kadar tüm seviyelerde İngilizce eğitimi',
           features: [
-            'Genel İngilizce',
-            'Business English',
-            'IELTS Hazırlık',
-            'TOEFL Hazırlık',
-            'Konuşma Kulübü'
+            'Okul Öncesi İngilizce',
+            'İlkokul İngilizce',
+            'Kolej Giriş Sınavlarına Hazırlık',
+            'Ortaokul İngilizce',
+            'Lise İngilizce',
+            'Yetişkin İngilizce',
           ],
           duration: '3-6 Ay',
-          level: 'Tüm Seviyeler'
+          level: 'Tüm Seviyeler',
+          route: '/services/english-courses'
         },
         {
-          icon: 'mdi-alphabet-cyrillic',
-          title: 'Rusça Kursları',
-          description: 'Native öğretmenlerle Rusça öğrenin',
+          icon: 'mdi-certificate',
+          title: 'Uluslararası Sınavlar',
+          description: 'Güçlü kadro, bire bir takip, deneme sınavları',
           features: [
-            'Başlangıç Rusça',
-            'İleri Seviye Rusça',
-            'Rusça Konuşma',
-            'İş Rusçası',
-            'Rusça Sertifika Programı'
+            'IGCSE Cambridge',
+            'IDCSE Edexcel',
+            'Pearson',
+            'PTE',
+            'IELTS'
           ],
           duration: '4-8 Ay',
-          level: 'A1-C1'
+          level: 'A1-C1',
+          route: '/services/international-exams'
         },
         {
-          icon: 'mdi-translate',
-          title: 'Türkçe Kursları',
-          description: 'Yabancılar için Türkçe eğitimi',
+          icon: 'mdi-airplane',
+          title: 'Yurt Dışı Eğitim & Programlar',
+          description: 'Uluslararası eğitim fırsatları ve yaz kampları',
           features: [
-            'TÖMER Hazırlık',
-            'Günlük Türkçe',
-            'Akademik Türkçe',
-            'İş Türkçesi',
-            'Türkçe Konuşma Atölyesi'
+            'Yaz kampları / Summer Schools',
+            'Ebeveynli yaz kampları',
+            '18+ dil okulları (3–5 hafta veya daha uzun süreli programlar)',
           ],
-          duration: '3-6 Ay',
-          level: 'A1-C2'
+          duration: '3-8 Hafta',
+          level: 'Tüm Yaşlar',
+          route: '/services/abroad-programs'
         },
         {
-          icon: 'mdi-laptop',
-          title: 'Online Eğitim',
-          description: 'Evden veya ofisinizden canlı dersler',
+          icon: 'mdi-school-outline',
+          title: 'Yurt Dışı Eğitim Danışmanlığı',
+          description: 'Profesyonel üniversite yerleştirme danışmanlığı',
           features: [
-            'Birebir Online Ders',
-            'Grup Online Dersleri',
-            'Esnek Ders Saatleri',
-            'Kayıtlı Ders İçerikleri',
-            'Online Sınav Hazırlık'
+            'Üniversite ve bölüm seçimi',
+            'Yerleştirme süreci',
+            'Ülke bazlı rehberlik (Hollanda, İngiltere, Almanya vb.)',
+            'Doğru ülke, doğru üniversite, doğru bölüm rehberliği',
           ],
           duration: 'Esnek',
-          level: 'Tüm Seviyeler'
+          level: 'Lise ve Üzeri',
+          route: '/services/education-consulting'
         }
       ]
+    }
+  },
+  methods: {
+    navigateToService(route: string) {
+      this.$router.push(route)
     }
   }
 })

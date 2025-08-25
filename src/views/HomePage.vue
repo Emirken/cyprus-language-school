@@ -8,32 +8,60 @@
     >
       <div class="d-flex flex-column fill-height justify-center align-center">
         <h1 class="text-h2 text-md-h1 font-weight-bold white--text text-center mb-4">
-          {{ $t('hero.title') }}
+          Learn Plus English Center
         </h1>
         <p class="text-h6 white--text text-center mb-6">
-          {{ $t('hero.subtitle') }}
+          İngilizceyi hayatın doğal bir parçası haline getiriyoruz
         </p>
-        <div>
-          <v-btn
-              size="x-large"
-              color="secondary"
-              rounded="pill"
-              class="mr-4"
-              @click="$router.push('/contact')"
-          >
-            {{ $t('hero.cta') }}
-          </v-btn>
-          <v-btn
-              size="x-large"
-              variant="outlined"
-              color="white"
-              rounded="pill"
-          >
-            {{ $t('hero.learnMore') }}
-          </v-btn>
-        </div>
+        <p class="text-body-1 white--text text-center mb-6 mx-4" style="max-width: 800px;">
+          <em>"Learners today, leaders tomorrow"</em> - 3 yaşından yetişkinlere kadar her yaştan bireye özel dersler
+        </p>
+
       </div>
     </v-parallax>
+
+    <!-- About Learn Plus Section -->
+    <v-container class="py-16">
+      <v-row align="center">
+        <v-col cols="12" md="6">
+          <v-img
+              src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?ixlib=rb-4.0.3"
+              height="400"
+              cover
+              class="rounded-lg"
+          ></v-img>
+        </v-col>
+        <v-col cols="12" md="6">
+          <h2 class="text-h3 mb-4 text-primary">Learn Plus English Center'a Hoş Geldiniz</h2>
+          <p class="text-body-1 mb-4">
+            Learn Plus, 2023 yılında İngilizceyi her yaş için hayatın doğal bir parçası haline getirmek amacıyla kuruldu.
+            Amacımız yalnızca İngilizce öğretmek değil, onu öğrencilerimizin hayatının doğal bir parçası haline getirmektir.
+          </p>
+          <p class="text-body-1 mb-4">
+            3 yaşından yetişkinlere kadar her yaştan bireye, ihtiyaçlarına uygun dersler sunuyoruz.
+            Öğrencilerimizi uluslararası sınavlarda, okul hayatlarında ve gelecekteki kariyerlerinde
+            başarılı bireyler olarak hazırlamayı hedefliyoruz.
+          </p>
+          <v-alert
+              type="info"
+              variant="tonal"
+              class="mb-4"
+          >
+            <strong>Genel İngilizce Kursları</strong> - Her seviyeden öğrenciye uygun program
+          </v-alert>
+          <p class="text-body-1 mb-6">
+            <strong>LearnPlus'ta İngilizce sadece bir ders değil;</strong> yeni fırsatların kapısını açan,
+            hayat boyu sürecek bir yolculuktur.
+          </p>
+          <div class="d-flex align-center">
+            <v-chip color="primary" size="large" class="mr-3">
+              <v-icon start>mdi-star</v-icon>
+              Learners today, leaders tomorrow
+            </v-chip>
+          </div>
+        </v-col>
+      </v-row>
+    </v-container>
 
     <!-- Features Section -->
     <v-container class="py-16">
@@ -85,17 +113,6 @@
               <v-card-text>
                 <p>{{ service.description }}</p>
               </v-card-text>
-              <v-card-actions>
-                <v-btn
-                    color="primary"
-                    variant="text"
-                    block
-                    @click="$router.push('/services')"
-                >
-                  Detaylı Bilgi
-                  <v-icon end>mdi-arrow-right</v-icon>
-                </v-btn>
-              </v-card-actions>
             </v-card>
           </v-col>
         </v-row>
@@ -177,25 +194,26 @@ export default defineComponent({
         },
         {
           icon: 'mdi-alphabet-cyrillic',
-          title: 'Rusça',
-          description: 'Native öğretmenlerle Rusça eğitimi',
+          title: 'Uluslararası Sınavlar',
+          description: 'IGCSE Cambridge ,IDCSE Edexcel, Pearson, PTE, IELTS',
           color: 'error',
           image: 'https://images.unsplash.com/photo-1516901121982-4ba280115a36?ixlib=rb-4.0.3&w=400'
         },
         {
           icon: 'mdi-translate',
-          title: 'Türkçe',
-          description: 'Yabancılar için Türkçe kursları',
+          title: 'Dil Okulları & Yaz Programları',
+          description: '',
           color: 'success',
           image: 'https://images.unsplash.com/photo-1589395937658-0557e7d89fad?ixlib=rb-4.0.3&w=400'
         },
         {
           icon: 'mdi-laptop',
-          title: 'Online Eğitim',
-          description: 'Canlı online ders imkanı',
+          title: 'Yurt Dışı Eğitim Danışmanlığı',
+          description: '',
           color: 'warning',
           image: 'https://images.unsplash.com/photo-1588702547919-26089e690ecc?ixlib=rb-4.0.3&w=400'
         }
+
       ],
       statistics: [
         { icon: 'mdi-school', value: '5000+', label: 'Mezun Öğrenci' },
