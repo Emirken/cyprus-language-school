@@ -1,0 +1,674 @@
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+// ========================================
+// GLOBAL RESET & BASE STYLES
+// ========================================
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+body {
+  font-family: $font-family-primary;
+  font-size: $font-size-base;
+  line-height: $line-height-normal;
+  color: $brand-text;
+  background-color: $brand-background;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+// ========================================
+// TYPOGRAPHY ENHANCEMENTS
+// ========================================
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-display;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  color: $brand-text;
+  margin-bottom: $spacing-md;
+}
+
+h1 {
+  font-size: $font-size-5xl;
+  font-weight: $font-weight-black;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: $font-size-4xl;
+  }
+}
+
+h2 {
+  font-size: $font-size-4xl;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: $font-size-3xl;
+  }
+}
+
+h3 {
+  font-size: $font-size-3xl;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: $font-size-2xl;
+  }
+}
+
+h4 {
+  font-size: $font-size-2xl;
+}
+
+h5 {
+  font-size: $font-size-xl;
+}
+
+h6 {
+  font-size: $font-size-lg;
+}
+
+p {
+  margin-bottom: $spacing-md;
+  color: $brand-text-light;
+  line-height: $line-height-relaxed;
+}
+
+.text-gradient {
+  background: $gradient-primary;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// ========================================
+// LAYOUT UTILITIES
+// ========================================
+
+.container-custom {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 $spacing-lg;
+
+  @media (max-width: $breakpoint-sm) {
+    padding: 0 $spacing-md;
+  }
+}
+
+.section-padding {
+  padding: $spacing-4xl 0;
+
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-3xl 0;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    padding: $spacing-2xl 0;
+  }
+}
+
+// ========================================
+// HEADER ENHANCEMENTS
+// ========================================
+
+.v-app-bar {
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba($primary-color, 0.1);
+  transition: $transition-all;
+
+  &.scrolled {
+    box-shadow: $shadow-lg;
+    background: rgba($white, 0.95) !important;
+  }
+}
+
+.v-app-bar-title {
+  font-family: $font-family-display;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-2xl;
+
+  .v-icon {
+    filter: drop-shadow($shadow-sm);
+    transition: $transition-transform;
+
+    &:hover {
+      transform: rotate(10deg) scale(1.1);
+    }
+  }
+}
+
+// Navigation enhancements
+.nav-btn {
+  font-weight: $font-weight-medium;
+  text-transform: none;
+  letter-spacing: 0.025em;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: $gradient-primary;
+    transition: $transition-base;
+    transform: translateX(-50%);
+  }
+
+  &:hover::before,
+  &.router-link-active::before {
+    width: 80%;
+  }
+}
+
+// Language selector enhancement
+.language-selector {
+  .v-btn {
+    border: 1px solid rgba($primary-color, 0.3);
+    backdrop-filter: blur(5px);
+    transition: $transition-all;
+
+    &:hover {
+      background: rgba($primary-color, 0.1);
+      transform: translateY(-1px);
+      box-shadow: $shadow-md;
+    }
+  }
+}
+
+// ========================================
+// HERO SECTION ENHANCEMENTS
+// ========================================
+
+.v-parallax {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $overlay-dark;
+    z-index: 1;
+  }
+
+  .v-parallax__content {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.hero-title {
+  font-family: $font-family-display;
+  font-weight: $font-weight-black;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease-out;
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.hero-subtitle {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+// ========================================
+// CARD ENHANCEMENTS
+// ========================================
+
+.v-card {
+  border-radius: $card-border-radius !important;
+  box-shadow: $card-shadow;
+  transition: $transition-all;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: $gradient-primary;
+    transform: scaleX(0);
+    transition: $transition-transform;
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: $card-shadow-hover;
+
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.card-gradient-bg {
+  background: $gradient-primary;
+  color: $white;
+
+  .v-card-title,
+  .v-card-text {
+    color: $white !important;
+  }
+}
+
+.feature-card {
+  text-align: center;
+  padding: $spacing-xl;
+  height: 100%;
+
+  .feature-icon {
+    margin-bottom: $spacing-lg;
+    padding: $spacing-lg;
+    border-radius: $border-radius-full;
+    background: rgba($primary-color, 0.1);
+    display: inline-block;
+    transition: $transition-all;
+  }
+
+  &:hover .feature-icon {
+    background: $primary-color;
+    color: $white;
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: $shadow-primary;
+  }
+}
+
+// ========================================
+// BUTTON ENHANCEMENTS
+// ========================================
+
+.v-btn {
+  font-weight: $font-weight-medium !important;
+  text-transform: none !important;
+  letter-spacing: 0.025em;
+  border-radius: $button-border-radius !important;
+  transition: $transition-all;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  &:hover::before {
+    left: 100%;
+  }
+
+  &.v-btn--size-x-large {
+    font-size: $font-size-lg;
+    padding: $spacing-lg $spacing-2xl;
+  }
+
+  &.cta-button {
+    background: $gradient-primary !important;
+    box-shadow: $shadow-primary;
+    transform: perspective(1px) translateZ(0);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: $shadow-xl;
+    }
+  }
+}
+
+// ========================================
+// FORM ENHANCEMENTS
+// ========================================
+
+.v-text-field,
+.v-textarea,
+.v-select {
+  .v-field {
+    border-radius: $input-border-radius !important;
+    box-shadow: $shadow-sm;
+    transition: $transition-all;
+
+    &:hover {
+      box-shadow: $shadow-md;
+    }
+
+    &.v-field--focused {
+      box-shadow: $shadow-lg;
+      transform: translateY(-1px);
+    }
+  }
+}
+
+// ========================================
+// STATISTICS SECTION
+// ========================================
+
+.stats-section {
+  background: $gradient-primary;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>') repeat;
+    background-size: 50px 50px;
+  }
+
+  .stat-item {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    .stat-icon {
+      margin-bottom: $spacing-md;
+      opacity: 0.9;
+      transition: $transition-transform;
+    }
+
+    .stat-number {
+      font-family: $font-family-display;
+      font-weight: $font-weight-black;
+      font-size: $font-size-4xl;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: $spacing-sm;
+    }
+
+    .stat-label {
+      font-weight: $font-weight-medium;
+      opacity: 0.95;
+    }
+
+    &:hover .stat-icon {
+      transform: scale(1.1) rotate(5deg);
+    }
+  }
+}
+
+// ========================================
+// FOOTER ENHANCEMENTS
+// ========================================
+
+.v-footer {
+  background: $gradient-primary !important;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%);
+    background-size: 30px 30px;
+    opacity: 0.5;
+  }
+
+  .footer-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .social-btn {
+    margin: 0 $spacing-xs;
+    transition: $transition-all;
+
+    &:hover {
+      transform: translateY(-3px) scale(1.1);
+      background: rgba(255, 255, 255, 0.2) !important;
+    }
+  }
+}
+
+// ========================================
+// BREADCRUMBS ENHANCEMENT
+// ========================================
+
+.v-breadcrumbs {
+  .v-breadcrumbs-item {
+    font-weight: $font-weight-medium;
+    transition: $transition-colors;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.8) !important;
+    }
+  }
+}
+
+// ========================================
+// CHIP ENHANCEMENTS
+// ========================================
+
+.v-chip {
+  font-weight: $font-weight-medium !important;
+  border-radius: $border-radius-xl !important;
+  transition: $transition-all;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: $shadow-md;
+  }
+}
+
+// ========================================
+// LIST ENHANCEMENTS
+// ========================================
+
+.v-list-item {
+  border-radius: $border-radius-md !important;
+  margin-bottom: $spacing-xs;
+  transition: $transition-all;
+
+  &:hover {
+    background: rgba($primary-color, 0.05) !important;
+    transform: translateX(4px);
+  }
+}
+
+// ========================================
+// ANIMATIONS & TRANSITIONS
+// ========================================
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.fade-in-left {
+  animation: fadeInLeft 0.8s ease-out;
+}
+
+.fade-in-right {
+  animation: fadeInRight 0.8s ease-out;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.stagger-animation {
+  .v-col:nth-child(1) { animation-delay: 0.1s; }
+  .v-col:nth-child(2) { animation-delay: 0.2s; }
+  .v-col:nth-child(3) { animation-delay: 0.3s; }
+  .v-col:nth-child(4) { animation-delay: 0.4s; }
+  .v-col:nth-child(5) { animation-delay: 0.5s; }
+  .v-col:nth-child(6) { animation-delay: 0.6s; }
+}
+
+// ========================================
+// RESPONSIVE UTILITIES
+// ========================================
+
+@media (max-width: $breakpoint-md) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+  .v-container {
+    padding: 0 $spacing-md !important;
+  }
+
+  .section-padding {
+    padding: $spacing-2xl 0;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .hide-on-small {
+    display: none !important;
+  }
+
+  h1 {
+    font-size: $font-size-3xl !important;
+  }
+
+  h2 {
+    font-size: $font-size-2xl !important;
+  }
+
+  .v-btn.v-btn--size-x-large {
+    font-size: $font-size-base;
+    padding: $spacing-md $spacing-xl;
+  }
+}
+
+// ========================================
+// SCROLL ANIMATIONS
+// ========================================
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+
+  &.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ========================================
+// LOADING STATES
+// ========================================
+
+.loading-shimmer {
+  background: linear-gradient(90deg,
+          rgba($gray-200, 0.2) 25%,
+          rgba($gray-200, 0.4) 50%,
+          rgba($gray-200, 0.2) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+// ========================================
+// ACCESSIBILITY ENHANCEMENTS
+// ========================================
+
+.v-btn:focus-visible,
+.v-text-field:focus-within,
+.v-select:focus-within {
+  outline: $focus-outline-width solid $focus-outline-color;
+  outline-offset: $focus-outline-offset;
+}
+
+// High contrast mode
+@media (prefers-contrast: more) {
+  .v-card {
+    border: 2px solid $gray-300;
+  }
+
+  .v-btn {
+    border: 1px solid currentColor;
+  }
+}
+
+// Reduced motion
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+// ========================================
+// PRINT STYLES
+// ========================================
+
+@media print {
+  .v-app-bar,
+  .v-footer,
+  .v-btn {
+    display: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+
+  .v-container {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+}

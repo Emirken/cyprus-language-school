@@ -76,8 +76,20 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { useHead } from '@unhead/vue'
 
 export default defineComponent({
-  name: 'AboutPage'
+  name: 'AboutPage',
+  setup() {
+    useHead({
+      title: 'Hakkımızda - Cyprus Language School',
+      meta: [
+        {
+          name: 'description',
+          content: 'Kıbrıs Dil Okulu olarak 2009 yılından beri Lefkoşa\'da İngilizce, Rusça ve Türkçe eğitimi veriyoruz. Uzman kadromuzla tanışın.'
+        }
+      ]
+    })
+  }
 })
 </script>

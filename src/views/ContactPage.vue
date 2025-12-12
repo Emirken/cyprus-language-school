@@ -139,10 +139,21 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
+import { useHead } from '@unhead/vue'
 
 export default defineComponent({
   name: 'ContactPage',
   setup() {
+    useHead({
+      title: 'İletişim - Cyprus Language School',
+      meta: [
+        {
+          name: 'description',
+          content: 'Kıbrıs Dil Okulu iletişim bilgileri. Lefkoşa Dereboyu şubemiz için adres, telefon ve e-posta bilgileri. Ücretsiz danışmanlık alın.'
+        }
+      ]
+    })
+
     const loading = ref(false)
     const form = ref({
       name: '',
