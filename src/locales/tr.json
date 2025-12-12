@@ -1,15 +1,55 @@
 {
+  "common": {
+    "brandName": "Cyprus Language School",
+    "applyNow": "Başvuru Yap",
+    "applyNow2": "Hemen Başvur",
+    "contactUs": "Bize Ulaşın",
+    "learnMore": "Daha Fazla",
+    "readMore": "Detaylı Bilgi",
+    "viewAll": "Tümünü Gör"
+  },
   "nav": {
     "home": "Ana Sayfa",
     "about": "Hakkımızda",
-    "services": "Hizmetler",
-    "contact": "İletişim"
+    "services": "Programlar",
+    "contact": "İletişim",
+    "language": "Dil Seçimi",
+    "changeLanguage": "Dil Değiştir"
   },
-  "hero": {
-    "title": "Kıbrıs'ın Önde Gelen Dil Okulu",
-    "subtitle": "İngilizce, Rusça ve Türkçe eğitiminde uzman kadromuzla yanınızdayız",
-    "cta": "Hemen Başla",
-    "learnMore": "Daha Fazla Bilgi"
+  "home": {
+    "hero": {
+      "chip": "Kıbrıs'ın Lider Dil Okulu",
+      "title": "Geleceğinize\nYeni Bir Dil\nİle Yön Verin",
+      "subtitle": "İngilizce, Rusça ve Türkçe eğitiminde uzman kadromuz ve modern metotlarımızla dünya vatandaşı olmanız için yanınızdayız.",
+      "ctaPrimary": "Hemen Başvurun",
+      "ctaSecondary": "Kursları İncele",
+      "happyStudents": "Mutlu Öğrenci"
+    },
+    "stats": {
+      "graduates": "Mezun",
+      "teachers": "Eğitmen",
+      "satisfaction": "Memnuniyet",
+      "campus": "Kampüs"
+    },
+    "whyUs": {
+      "overline": "NEDEN LEARN PLUS?",
+      "title": "Eğitimde Mükemmellik",
+      "subtitle": "Standartların ötesinde bir eğitim anlayışıyla size en iyisini sunuyoruz."
+    },
+    "programs": {
+      "overline": "PROGRAMLARIMIZ",
+      "title": "Size Uygun Eğitimi Seçin",
+      "viewAll": "Tüm Programları Gör",
+      "cardTag": "Kurs",
+      "certified": "Sertifikalı Eğitim",
+      "details": "Detaylı Bilgi"
+    },
+    "cta": {
+      "title": "Ücretsiz Seviye Tespit Sınavı",
+      "description": "İngilizce seviyenizi hemen ölçün ve size en uygun eğitim programını belirleyelim.",
+      "startExam": "Sınava Başla",
+      "callUs": "Bizi Arayın"
+    }
   },
   "features": {
     "title": "Neden Bizi Seçmelisiniz?",
@@ -25,5 +65,62 @@
       "title": "Sertifika Programları",
       "desc": "Uluslararası geçerliliğe sahip sertifika programları"
     }
+  },
+  "footer": {
+    "brandSubtitle": "LANGUAGE SCHOOL",
+    "aboutText": "Kıbrıs'ın kalbinde, uluslararası standartlarda dil eğitimi. Geleceğinize yatırım yapın, dünyayı bizimle keşfedin.",
+    "quickLinks": "Hızlı Linkler",
+    "programs": "Programlar",
+    "contact": "Bize Ulaşın",
+    "address": "Dereboyu Cad. No:25, Lefkoşa, KKTC",
+    "rights": "Tüm hakları saklıdır.",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Şartları"
+  },
+  "courses": {
+    "generalEnglish": "Genel İngilizce",
+    "generalEnglishDesc": "Her seviyede konuşma, dinleme, okuma ve yazma pratikleri ile genel İngilizce becerilerinizi geliştirin.",
+    "academicExams": "Akademik Sınavlar",
+    "academicExamsDesc": "IELTS, TOEFL, PTE gibi uluslararası geçerliliği olan sınavlara özel hazırlık programları.",
+    "speakingClub": "Konuşma Kulübü",
+    "speakingClubDesc": "Yabancı öğretmenler eşliğinde pratik yapın, akıcı konuşma becerisi kazanın.",
+    "businessEnglish": "İş İngilizcesi",
+    "businessEnglishDesc": "Kariyerinizde yükselmek için profesyonel iş dünyasına yönelik İngilizce eğitimi.",
+    "studyAbroad": "Yurt Dışı Eğitim",
+    "studyAbroadDesc": "Yurt dışındaki dil okulları ve üniversiteler için danışmanlık hizmeti.",
+    "russian": "Akademik Rusça",
+    "turkish": "Yabancılar için Türkçe",
+    "ielts": "IELTS Hazırlık",
+    "kids": "Çocuk Grupları"
+  },
+  "contact": {
+    "title": "İletişim",
+    "formTitle": "Bize Ulaşın",
+    "name": "Ad Soyad",
+    "email": "E-posta",
+    "phone": "Telefon",
+    "courseInterest": "İlgilendiğiniz Kurs",
+    "message": "Mesajınız",
+    "send": "Gönder",
+    "infoTitle": "İletişim Bilgileri",
+    "addressTitle": "Adres",
+    "phoneTitle": "Telefon",
+    "emailTitle": "E-posta",
+    "workingHoursTitle": "Çalışma Saatleri",
+    "workingHours": "Pazartesi - Cuma: 09:00 - 18:00\nCumartesi: 09:00 - 14:00",
+    "viewMap": "Google Maps'te Görüntüle",
+    "success": "Mesajınız başarıyla gönderildi!"
+  },
+  "about": {
+    "title": "Hakkımızda",
+    "experienceTitle": "15 Yıllık Tecrübe ile Yanınızdayız",
+    "p1": "Kıbrıs Dil Okulu olarak, 2009 yılından bu yana binlerce öğrenciye kaliteli dil eğitimi sunuyoruz. Uzman kadromuz ve modern eğitim metodlarımızla, öğrencilerimizin dil öğrenme yolculuğunda en iyi sonuçları almalarını sağlıyoruz.",
+    "p2": "İngilizce, Rusça ve Türkçe dillerinde verdiğimiz eğitimlerle, öğrencilerimizin akademik ve profesyonel hayatlarında başarılı olmalarına katkı sağlıyoruz. Modern tesislerimiz ve interaktif öğretim yöntemlerimizle fark yaratıyoruz.",
+    "mission": "Misyonumuz",
+    "missionDesc": "Öğrencilerimize en kaliteli dil eğitimini sunarak, onların akademik ve profesyonel hayatlarında başarılı olmalarını sağlamak.",
+    "vision": "Vizyonumuz",
+    "visionDesc": "Kıbrıs'ın en tercih edilen ve uluslararası standartlarda eğitim veren dil okulu olmak.",
+    "values": "Değerlerimiz",
+    "valuesDesc": "Kalite, güven, yenilikçilik ve öğrenci odaklı yaklaşım ile sürekli gelişim."
   }
 }

@@ -18,16 +18,13 @@
                 elevation="2"
               >
                 <v-icon start icon="mdi-star" size="small"></v-icon>
-                Kıbrıs'ın Lider Dil Okulu
+                {{ $t('home.hero.chip') }}
               </v-chip>
               <h1 class="text-h2 text-md-h1 font-weight-black white--text mb-6 lh-tight">
-                Geleceğinize <br>
-                <span class="text-gradient-gold">Yeni Bir Dil</span> <br>
-                İle Yön Verin
+                {{ $t('home.hero.title') }}
               </h1>
               <p class="text-h6 white--text opacity-90 mb-8 font-weight-light" style="line-height: 1.6;">
-                İngilizce, Rusça ve Türkçe eğitiminde uzman kadromuz ve modern metotlarımızla
-                dünya vatandaşı olmanız için yanınızdayız.
+                {{ $t('home.hero.subtitle') }}
               </p>
               <div class="d-flex flex-wrap gap-4">
                 <v-btn
@@ -39,7 +36,7 @@
                   to="/contact"
                   height="56"
                 >
-                  Hemen Başvurun
+                  {{ $t('home.hero.ctaPrimary') }}
                   <v-icon end class="ml-2">mdi-arrow-right</v-icon>
                 </v-btn>
                 <v-btn
@@ -51,7 +48,7 @@
                   to="/services"
                   height="56"
                 >
-                  Kursları İncele
+                  {{ $t('home.hero.ctaSecondary') }}
                 </v-btn>
               </div>
               
@@ -78,7 +75,7 @@
                     <v-icon color="secondary" size="small">mdi-star</v-icon>
                     <v-icon color="secondary" size="small">mdi-star</v-icon>
                   </div>
-                  <span class="text-caption font-weight-medium opacity-80">5000+ Mutlu Öğrenci</span>
+                  <span class="text-caption font-weight-medium opacity-80">5000+ {{ $t('home.hero.happyStudents') }}</span>
                 </div>
               </div>
             </div>
@@ -103,7 +100,7 @@
               <v-icon size="32" color="primary">{{ stat.icon }}</v-icon>
             </div>
             <h3 class="text-h4 font-weight-black primary--text mb-1">{{ stat.value }}</h3>
-            <p class="text-body-2 text-grey-darken-1 font-weight-medium text-uppercase ls-1">{{ stat.label }}</p>
+            <p class="text-body-2 text-grey-darken-1 font-weight-medium text-uppercase ls-1">{{ $t(stat.label) }}</p>
           </v-col>
         </v-row>
       </v-card>
@@ -112,16 +109,17 @@
     <!-- Why Choose Us -->
     <v-container class="py-16 mt-8">
       <div class="text-center mb-16 px-4">
-        <span class="text-overline text-primary font-weight-bold mb-2 d-block ls-2">NEDEN LEARN PLUS?</span>
+        <span class="text-overline text-primary font-weight-bold mb-2 d-block ls-2">{{ $t('home.whyUs.overline') }}</span>
         <h2 class="text-h3 font-weight-bold text-grey-darken-4 mb-4">
-          Eğitimde <span class="text-primary position-relative inline-block">Mükemmellik
+          {{ $t('home.whyUs.title') }}
+          <span class="text-primary position-relative inline-block">
             <svg class="wavy-underline" viewBox="0 0 100 10" preserveAspectRatio="none">
               <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="2" fill="none" />
             </svg>
           </span>
         </h2>
         <p class="text-h6 text-grey font-weight-regular mx-auto" style="max-width: 700px;">
-          Standartların ötesinde bir eğitim anlayışıyla size en iyisini sunuyoruz.
+          {{ $t('home.whyUs.subtitle') }}
         </p>
       </div>
 
@@ -147,7 +145,7 @@
                 {{ $t(feature.description) }}
               </p>
               <v-btn variant="text" :color="feature.color" class="px-0 align-self-start font-weight-bold">
-                Daha Fazla
+                {{ $t('common.readMore') }}
                 <v-icon end size="small">mdi-arrow-right</v-icon>
               </v-btn>
             </div>
@@ -165,13 +163,13 @@
       <v-container class="position-relative" style="z-index: 2;">
         <div class="d-flex flex-column flex-md-row justify-space-between align-md-end mb-12 px-4">
           <div class="mb-6 mb-md-0">
-            <span class="text-overline text-primary font-weight-bold mb-2 d-block ls-2">PROGRAMLARIMIZ</span>
+            <span class="text-overline text-primary font-weight-bold mb-2 d-block ls-2">{{ $t('home.programs.overline') }}</span>
             <h2 class="text-h3 font-weight-bold text-grey-darken-4">
-              Size Uygun Eğitimi Seçin
+              {{ $t('home.programs.title') }}
             </h2>
           </div>
           <v-btn color="primary" variant="outlined" rounded="pill" size="large" to="/services">
-            Tüm Programları Gör
+            {{ $t('home.programs.viewAll') }}
           </v-btn>
         </div>
 
@@ -205,7 +203,7 @@
                     class="service-chip font-weight-bold text-uppercase"
                     size="small"
                   >
-                    Kurs
+                    {{ $t('home.programs.cardTag') }}
                   </v-chip>
                 </v-img>
               </div>
@@ -213,15 +211,15 @@
               <v-card-text class="pa-6">
                 <div class="d-flex align-center mb-3">
                   <v-icon size="24" :color="service.color" class="mr-2">{{ service.icon }}</v-icon>
-                  <div class="text-caption text-uppercase font-weight-bold text-grey">Sertifikalı Eğitim</div>
+                  <div class="text-caption text-uppercase font-weight-bold text-grey">{{ $t('home.programs.certified') }}</div>
                 </div>
-                <h3 class="text-h5 font-weight-bold mb-2 text-truncate">{{ service.title }}</h3>
+                <h3 class="text-h5 font-weight-bold mb-2 text-truncate">{{ $t(service.title) }}</h3>
                 <p class="text-body-2 text-grey mb-4 line-clamp-2" style="min-height: 44px;">
-                  {{ service.description || 'Detaylı bilgi için program sayfasını ziyaret edin.' }}
+                  {{ $t(service.description) }}
                 </p>
                 <v-divider class="mb-4"></v-divider>
                 <div class="d-flex justify-space-between align-center">
-                  <span class="text-caption font-weight-medium text-grey">Detaylı Bilgi</span>
+                  <span class="text-caption font-weight-medium text-grey">{{ $t('home.programs.details') }}</span>
                   <v-btn icon density="comfortable" variant="tonal" :color="service.color" size="small">
                     <v-icon>mdi-arrow-right</v-icon>
                   </v-btn>
@@ -245,10 +243,9 @@
         <div class="cta-pattern"></div>
         <v-row align="center">
           <v-col cols="12" md="8">
-            <h2 class="text-h3 font-weight-black mb-4">Ücretsiz Seviye Tespit Sınavı</h2>
+            <h2 class="text-h3 font-weight-black mb-4">{{ $t('home.cta.title') }}</h2>
             <p class="text-h6 opacity-90 font-weight-regular mb-8" style="max-width: 600px;">
-              İngilizce seviyenizi hemen ölçün ve size en uygun eğitim programını belirleyelim.
-              Sadece 15 dakikanızı ayırın!
+              {{ $t('home.cta.description') }}
             </p>
             <div class="d-flex flex-wrap gap-4">
               <v-btn
@@ -258,7 +255,7 @@
                 rounded="pill"
                 href="#"
               >
-                Sınava Başla
+                {{ $t('home.cta.startExam') }}
                 <v-icon end>mdi-clock-outline</v-icon>
               </v-btn>
               <v-btn
@@ -269,7 +266,7 @@
                 rounded="pill"
                 to="/contact"
               >
-                Bizi Arayın
+                {{ $t('home.cta.callUs') }}
               </v-btn>
             </div>
           </v-col>
@@ -328,45 +325,45 @@ export default defineComponent({
       services: [
         {
           icon: 'mdi-translate',
-          title: 'Genel İngilizce',
-          description: 'Her seviyede konuşma, dinleme, okuma ve yazma pratikleri ile genel İngilizce becerilerinizi geliştirin.',
+          title: 'courses.generalEnglish',
+          description: 'courses.generalEnglishDesc',
           color: 'primary',
           image: 'https://images.unsplash.com/photo-1543109740-4bdb38fda756?ixlib=rb-4.0.3&w=400'
         },
         {
           icon: 'mdi-school',
-          title: 'Akademik Sınavlar',
-          description: 'IELTS, TOEFL, PTE gibi uluslararası geçerliliği olan sınavlara özel hazırlık programları.',
+          title: 'courses.academicExams',
+          description: 'courses.academicExamsDesc',
           color: 'error',
           image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&w=400'
         },
         {
           icon: 'mdi-chat-processing',
-          title: 'Konuşma Kulübü',
-          description: 'Yabancı öğretmenler eşliğinde pratik yapın, akıcı konuşma becerisi kazanın.',
+          title: 'courses.speakingClub',
+          description: 'courses.speakingClubDesc',
           color: 'success',
           image: 'https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-4.0.3&w=400'
         },
         {
           icon: 'mdi-briefcase',
-          title: 'İş İngilizcesi',
-          description: 'Kariyerinizde yükselmek için profesyonel iş dünyasına yönelik İngilizce eğitimi.',
+          title: 'courses.businessEnglish',
+          description: 'courses.businessEnglishDesc',
           color: 'info',
           image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&w=400'
         },
         {
           icon: 'mdi-airplane',
-          title: 'Yurt Dışı Eğitim',
-          description: 'Yurt dışındaki dil okulları ve üniversiteler için danışmanlık hizmeti.',
+          title: 'courses.studyAbroad',
+          description: 'courses.studyAbroadDesc',
           color: 'warning',
           image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&w=400'
         }
       ],
       statistics: [
-        { icon: 'mdi-account-group', value: '5000+', label: 'Mezun' },
-        { icon: 'mdi-teach', value: '50+', label: 'Eğitmen' },
-        { icon: 'mdi-trophy-variant', value: '%98', label: 'Memnuniyet' },
-        { icon: 'mdi-domain', value: '3', label: 'Kampüs' }
+        { icon: 'mdi-account-group', value: '5000+', label: 'home.stats.graduates' },
+        { icon: 'mdi-teach', value: '50+', label: 'home.stats.teachers' },
+        { icon: 'mdi-trophy-variant', value: '%98', label: 'home.stats.satisfaction' },
+        { icon: 'mdi-domain', value: '3', label: 'home.stats.campus' }
       ]
     }
   }

@@ -49,7 +49,7 @@
                 v-bind="props"
                 variant="outlined"
                 rounded
-                :color="(!isScrolled && isHome) ? 'white' : 'primary'"
+                
                 class="ml-2"
               >
                 <v-icon start>mdi-web</v-icon>

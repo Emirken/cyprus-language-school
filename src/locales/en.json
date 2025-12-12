@@ -1,15 +1,55 @@
 {
+  "common": {
+    "brandName": "Cyprus Language School",
+    "applyNow": "Apply Now",
+    "applyNow2": "Apply Immediately",
+    "contactUs": "Contact Us",
+    "learnMore": "Learn More",
+    "readMore": "Read More",
+    "viewAll": "View All"
+  },
   "nav": {
     "home": "Home",
     "about": "About Us",
-    "services": "Services",
-    "contact": "Contact"
+    "services": "Programs",
+    "contact": "Contact",
+    "language": "Language",
+    "changeLanguage": "Change Language"
   },
-  "hero": {
-    "title": "Cyprus' Leading Language School",
-    "subtitle": "We are here with our expert staff in English, Russian and Turkish education",
-    "cta": "Get Started",
-    "learnMore": "Learn More"
+  "home": {
+    "hero": {
+      "chip": "Cyprus' Leading Language School",
+      "title": "Shape Your Future\nWith a New Language",
+      "subtitle": "We are by your side on your journey to becoming a world citizen with our expert staff in English, Russian and Turkish education and modern methods.",
+      "ctaPrimary": "Apply Now",
+      "ctaSecondary": "View Courses",
+      "happyStudents": "Happy Students"
+    },
+    "stats": {
+      "graduates": "Graduates",
+      "teachers": "Instructors",
+      "satisfaction": "Satisfaction",
+      "campus": "Campuses"
+    },
+    "whyUs": {
+      "overline": "WHY LEARN PLUS?",
+      "title": "Excellence in Education",
+      "subtitle": "We offer you the best with an educational approach beyond standards."
+    },
+    "programs": {
+      "overline": "OUR PROGRAMS",
+      "title": "Choose the Education That Suits You",
+      "viewAll": "View All Programs",
+      "cardTag": "Course",
+      "certified": "Certified Education",
+      "details": "Details"
+    },
+    "cta": {
+      "title": "Free Placement Test",
+      "description": "Measure your English level immediately and let us determine the most suitable education program for you.",
+      "startExam": "Start Exam",
+      "callUs": "Call Us"
+    }
   },
   "features": {
     "title": "Why Choose Us?",
@@ -25,5 +65,62 @@
       "title": "Certificate Programs",
       "desc": "Internationally recognized certificate programs"
     }
+  },
+  "footer": {
+    "brandSubtitle": "LANGUAGE SCHOOL",
+    "aboutText": "Language education at international standards in the heart of Cyprus. Invest in your future, discover the world with us.",
+    "quickLinks": "Quick Links",
+    "programs": "Programs",
+    "contact": "Contact Us",
+    "address": "Dereboyu Ave. No:25, Nicosia, TRNC",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use"
+  },
+  "courses": {
+    "generalEnglish": "General English",
+    "generalEnglishDesc": "Improve your general English skills with speaking, listening, reading and writing practices at all levels.",
+    "academicExams": "Academic Exams",
+    "academicExamsDesc": "Special preparation programs for internationally valid exams such as IELTS, TOEFL, PTE.",
+    "speakingClub": "Speaking Club",
+    "speakingClubDesc": "Practice with foreign teachers, gain fluent speaking skills.",
+    "businessEnglish": "Business English",
+    "businessEnglishDesc": "English education for the professional business world to rise in your career.",
+    "studyAbroad": "Study Abroad",
+    "studyAbroadDesc": "Consultancy service for language schools and universities abroad.",
+    "russian": "Academic Russian",
+    "turkish": "Turkish for Foreigners",
+    "ielts": "IELTS Prep",
+    "kids": "Kid Groups"
+  },
+  "contact": {
+    "title": "Contact",
+    "formTitle": "Get in Touch",
+    "name": "Name Surname",
+    "email": "E-mail",
+    "phone": "Phone",
+    "courseInterest": "Course of Interest",
+    "message": "Your Message",
+    "send": "Send",
+    "infoTitle": "Contact Information",
+    "addressTitle": "Address",
+    "phoneTitle": "Phone",
+    "emailTitle": "E-mail",
+    "workingHoursTitle": "Working Hours",
+    "workingHours": "Monday - Friday: 09:00 - 18:00\nSaturday: 09:00 - 14:00",
+    "viewMap": "View on Google Maps",
+    "success": "Your message has been sent successfully!"
+  },
+  "about": {
+    "title": "About Us",
+    "experienceTitle": "We Are With You With 15 Years of Experience",
+    "p1": "As Cyprus Language School, we have been providing quality language education to thousands of students since 2009. We ensure that our students get the best results in their language learning journey with our expert staff and modern educational methods.",
+    "p2": "We contribute to our students' success in their academic and professional lives with the education we provide in English, Russian and Turkish. We make a difference with our modern facilities and interactive teaching methods.",
+    "mission": "Our Mission",
+    "missionDesc": "To ensure our students are successful in their academic and professional lives by providing them with the highest quality language education.",
+    "vision": "Our Vision",
+    "visionDesc": "To be the most preferred language school in Cyprus providing education at international standards.",
+    "values": "Our Values",
+    "valuesDesc": "Continuous development with quality, trust, innovation and student-oriented approach."
   }
 }
